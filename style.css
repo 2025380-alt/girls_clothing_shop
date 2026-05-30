@@ -1,0 +1,391 @@
+/* style.css - Bloom & Co. girly, clean, responsive */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+    background: #fff9fb;
+    color: #2d2d2d;
+    line-height: 1.5;
+}
+
+/* Header */
+header {
+    background: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ffd9e6;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #e85d8a;
+}
+nav a {
+    color: #4a4a4a;
+    text-decoration: none;
+    margin-left: 1.8rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #e85d8a;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #e85d8a;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.2s;
+}
+.btn:hover {
+    background: #c73e6b;
+    transform: scale(1.02);
+}
+.btn-outline {
+    background: transparent;
+    border: 2px solid #e85d8a;
+    color: #e85d8a;
+    padding: 0.6rem 1.4rem;
+    border-radius: 40px;
+    text-decoration: none;
+}
+.btn-outline:hover {
+    background: #e85d8a;
+    color: white;
+}
+.light {
+    background: white;
+    color: #e85d8a;
+}
+.light:hover {
+    background: #ffe0e8;
+}
+
+/* Hero banner */
+.hero {
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+/* Featured products section */
+.featured {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.product-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.25s;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+/* ✅ FIXED: product images as cover (no blur, no distortion) */
+.product-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
+    background-color: #fce4ec;
+    transition: transform 0.3s ease;
+}
+.product-card:hover .product-image {
+    transform: scale(1.02);
+}
+
+.product-info {
+    padding: 1rem;
+}
+.product-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.product-price {
+    color: #e85d8a;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+.add-to-cart {
+    width: 100%;
+    background: #e85d8a;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.add-to-cart:hover {
+    background: #c73e6b;
+}
+
+/* Why choose us */
+.why-us {
+    background: #ffeef2;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.feature-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    width: 220px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.feature-card h3 {
+    margin: 0.5rem 0;
+}
+
+/* Middle banner - LARGER and full image coverage */
+.mid-banner {
+    background-size: cover;          /* image covers whole area */
+    background-position: center 30%; /* adjust vertical focus (optional) */
+    background-repeat: no-repeat;
+    min-height: 450px;               /* makes banner big and image visible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem 0;
+}
+.mid-content {
+    background: rgba(0, 0, 0, 0.5);  /* dark overlay for text readability */
+    padding: 2rem 3rem;
+    border-radius: 24px;
+    max-width: 80%;
+}
+.mid-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    color: white;
+}
+.mid-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+/* Testimonials */
+.testimonials {
+    max-width: 1000px;
+    margin: 3rem auto;
+    text-align: center;
+}
+.testimonial-grid {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.testimonial {
+    background: #ffeef2;
+    padding: 1.5rem;
+    border-radius: 24px;
+    width: 260px;
+    font-style: italic;
+}
+.testimonial span {
+    display: block;
+    margin-top: 0.8rem;
+    font-weight: 600;
+    color: #e85d8a;
+}
+
+/* About section */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+.about-text { flex: 1; }
+.about-image {
+    flex: 1;
+    height: 280px;
+    background: url('https://picsum.photos/id/83/600/400') center/cover;
+    border-radius: 24px;
+}
+
+/* ========== SHOP PAGE ========== */
+.shop-container, .cart-container, .contact-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* ✅ IMPROVED MARKET PRICING CARD (clean, pink accent, subtle shadow) */
+.market-card {
+    background: linear-gradient(135deg, #fff0f5, #ffe4ed);
+    border-radius: 24px;
+    padding: 1.8rem 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border: 1px solid #ffc0d0;
+    box-shadow: 0 4px 12px rgba(232, 93, 138, 0.1);
+}
+.market-text h3 {
+    font-size: 1.6rem;
+    color: #b83b5e;
+    margin-bottom: 0.5rem;
+}
+.market-text p {
+    color: #5e3a45;
+    max-width: 500px;
+    margin: 0.5rem auto 1.2rem;
+}
+.market-btn {
+    background: #e85d8a;
+    color: white;
+    padding: 0.6rem 1.8rem;
+    font-size: 1rem;
+    border-radius: 40px;
+    border: none;
+    transition: all 0.2s;
+}
+.market-btn:hover {
+    background: #c73e6b;
+    transform: translateY(-2px);
+}
+
+.toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+}
+.search-box {
+    padding: 0.6rem 1rem;
+    border: 1px solid #ffc0d0;
+    border-radius: 40px;
+    width: 260px;
+}
+.cart-summary {
+    background: white;
+    border-radius: 20px;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    border: 1px solid #ffe0e8;
+}
+.cart-summary-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    border-top: 1px solid #ffe0e8;
+    padding-top: 0.8rem;
+}
+.cart-link {
+    color: #e85d8a;
+    text-decoration: none;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ffe0e8;
+}
+.cart-total {
+    text-align: right;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+.checkout-btn {
+    width: 100%;
+}
+
+/* Contact form */
+.contact-container input, .contact-container textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ffc0d0;
+    border-radius: 16px;
+}
+.feedback {
+    margin-top: 1rem;
+    color: #e85d8a;
+}
+
+/* Footer */
+footer {
+    background: #2d2d2d;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    nav a {
+        margin: 0 0.8rem;
+    }
+    .products-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    .product-image {
+        height: 200px;
+    }
+}
