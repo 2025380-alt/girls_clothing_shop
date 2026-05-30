@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Bloom & Co.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BLOOM & CO.</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <h2>We'd Love to Hear From You</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your name" required>
+            <input type="email" id="email" placeholder="Email address" required>
+            <input type="tel" id="phone" placeholder="Phone number (optional)">
+            <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+            <div id="formFeedback" class="feedback"></div>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2026 Bloom & Co.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
